@@ -1,6 +1,6 @@
 # Khun Na Phap (คุ ณ ภ า พ)
 This command line provide you the easiest way to be คุ ณ ภ า พ via command line interface. 
-The script helps you convert normal string to คุ ณ ภ า พ string and automatically copy to your clipboard.
+The script helps you convert normal string to คุ ณ ภ า พ string and **automatically copy to your clipboard.**
 
 
 # How to คุ ณ ภ า พ (OSX only)
