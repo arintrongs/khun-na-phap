@@ -1,0 +1,31 @@
+#! /usr/bin/python3
+
+import subprocess
+import sys
+
+data = "".join(sys.argv[1::])
+
+quality_list = []
+
+special_chars = ["่", "้", "๊", "๋", "ุ", "ู", "ั", "ิ", "ี", "ื", "์"]
+
+s = ""
+
+for c in data:
+    # English need to capitalize first
+    if ord(c) >= 97 and ord(c) <= 122:
+        c = c.upper()
+
+    if c not in special_chars:
+        quality_list.append(s)
+        s = ""
+
+    s = s + c
+
+quality_list.append(s)
+
+Q_U_A_L_I_T_Y__S_T_R_I_N_G = " ".join([x for x in quality_list if len(x) > 0])
+
+print(Q_U_A_L_I_T_Y__S_T_R_I_N_G)
+
+subprocess.run("pbcopy", universal_newlines=True, input=Q_U_A_L_I_T_Y__S_T_R_I_N_G)
